@@ -23,6 +23,7 @@ body{
     display:flex;
     width:100%;
     justify-content:space-between;
+    list-style:none;
 }
 
 .Content_into_content{
@@ -62,4 +63,122 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+}
+.Pictures{
+    display:flex;
+    text-align:center;
+}
+figcaption > p{
+    text-align:justify;
+    font-size:15px;
+}
+
+/*задание flex*/
+.Archery_Pushkin {
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.Static_gun {
+    transform: rotate(45deg);
+    background-image: url(../images/mini-gun6.png);
+    background-repeat: no-repeat;
+    flex: 1 1 100%;
+    width: 155px;
+    height: 103px;
+}
+
+.Dynamic_gun {
+    background-image: url(../images/mini-gun3.png);
+    flex: 0 0 0;
+    background-repeat: no-repeat;
+}
+
+.Bullet {
+    background-image: url(../images/mini-gun5.png);
+}
+
+.Phrase1 {
+    flex: 0 0 0;
+    opacity: 0;
+}
+
+.Phrase2 {
+    opacity: 0;
+}
+
+.Archery_Pushkin:hover .Static_gun {
+    transform: rotate(0deg);
+    transition: transform 2s ease;
+}
+
+.Archery_Pushkin:hover .Phrase1 {
+    opacity: 1;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.Archery_Pushkin:active .Static_gun {
+    flex: 0 0 0;
+}
+
+.Archery_Pushkin:active .Phrase1 {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0s ease;
+}
+
+.Archery_Pushkin:active .Dynamic_gun {
+    flex: 1 1 100%;
+    width: 186px;
+    height: 103px;
+    animation: 3s ease-in-out trambling-animation;
+}
+
+.Archery_Pushkin:active .Bullet {
+    width: 45px;
+    height: 37px;
+    background-size: cover;
+    transform: translateX(450px);
+    margin-top: 4px;
+    margin-left: 130px;
+    transition: transform 2s linear,opacity 1s ease;
+}
+
+.Archery_Pushkin:active .Phrase2 {
+    opacity: 1;
+    text-align: center;
+}
+.Pushkin_port{
+    width:150px;
+    margin-left:auto;
+    margin-right: 5%;
+}
+.Event_Push{
+    display:flex;
+    align-items:center;
+}
+.Archery_Pushkin:active + .Pushkin_port {
+    transform: rotate(180deg);
+    
+    transition: transform 2s ease-out;
+    transition-delay:2s;
+}
+.Block > h1{
+    text-align:center;
+}
+@keyframes trambling-animation {
+    80%, 90%, 100% {
+        transform: translateY(0px);
+    }
+
+    82%, 86% {
+        transform: translateY(5px);
+    }
+
+    84%, 88% {
+        transform: translateY(-5px);
+    }
 }
