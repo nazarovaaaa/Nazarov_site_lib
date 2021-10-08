@@ -1,4 +1,21 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat_Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Montserrat;
+    src:url(../fonts/Montserrat_Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat_Light.ttf);
+    font-weight: initial;
+}
+
 body{
+    font-family: Montserrat;
     height:100%;
 }
 
@@ -10,6 +27,7 @@ body{
 
 .Header{
     width: 80%;
+    max-width: 1000px;
     margin:auto;
     display:flex;
 }
@@ -28,6 +46,7 @@ body{
 
 .Content_into_content{
     width: 80%;
+    max-width: 1000px;
     margin:auto;
     background-color:darkgreen;
 }
@@ -68,12 +87,17 @@ body{
     display:flex;
     text-align:center;
 }
+
+.ImageFigure{
+    width: 40%;
+}
+
 figcaption > p{
     text-align:justify;
     font-size:15px;
 }
 
-/*задание flex*/
+
 .Archery_Pushkin {
     height: 135px;
     display: flex;
@@ -97,6 +121,7 @@ figcaption > p{
 }
 
 .Bullet {
+    opacity: 1;
     background-image: url(../images/mini-gun5.png);
 }
 
@@ -137,14 +162,14 @@ figcaption > p{
     animation: 3s ease-in-out trambling-animation;
 }
 
-.Archery_Pushkin:active .Bullet {
+.Archery_Pushkin:active + .Bullet {
     width: 45px;
     height: 37px;
+    margin-bottom: 50px;
+    opacity: 0;
     background-size: cover;
-    transform: translateX(450px);
-    margin-top: 4px;
-    margin-left: 130px;
-    transition: transform 2s linear,opacity 1s ease;
+    transform: translateX(calc(50vw));
+    transition: transform 2s linear, opacity 2.5s ease-out;
 }
 
 .Archery_Pushkin:active .Phrase2 {
@@ -160,7 +185,7 @@ figcaption > p{
     display:flex;
     align-items:center;
 }
-.Archery_Pushkin:active + .Pushkin_port {
+.Archery_Pushkin:active + .Bullet + .Pushkin_port {
     transform: rotate(180deg);
     
     transition: transform 2s ease-out;
@@ -180,5 +205,17 @@ figcaption > p{
 
     84%, 88% {
         transform: translateY(-5px);
+    }
+}
+
+@media(max-width: 1000px){
+    .Pictures{
+        flex-wrap: wrap;
+    }
+    .ImageFigure{
+        width: 20%;
+    }
+    .Navigation > ul{
+        flex-wrap: wrap;
     }
 }
