@@ -254,6 +254,8 @@ figcaption > p{
     font-size: 15px;
     width: 40%;
     min-width: 400px;
+    border-left: var(--main-white) 3px solid;
+    border-right: var(--main-white) 3px solid;
 }
 
 .Speech{
