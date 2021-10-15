@@ -23,6 +23,7 @@
 body{
     font-family: Montserrat;
     height:100%;
+    margin:0;
 }
 
 a{
@@ -42,6 +43,9 @@ a{
     height: 100px;
     margin:auto;
     display:flex;
+    padding-left:30px;
+    padding-right:30px;
+    background-color: var(--main-yellow);
 }
 
 .Navigation{
@@ -84,11 +88,13 @@ a{
 .Square {
     display: flex;
     justify-content: space-between;
+    max-width:1000px;
+    width:80%;
+    margin:auto;
 }
 .Square_item{
-    width: 100px;
-    height:100px;
     background-color:var(--main-yellow);
+    text-align:center;
 }
 .Buy{
     color: var(--main-white);
@@ -111,6 +117,157 @@ a{
     align-items:center;
 }
 
+/*задание рисунок*/
+.Maustache_right {
+    width: 20px;
+    height: 33px;
+    border-radius: 20px 70px;
+    transform: rotate(139deg);
+    border-right: 2px black solid;
+    margin-top: -33px;
+    margin-left: 105.5px;
+}
+
+.Maustache_left {
+    width: 20px;
+    height: 33px;
+    border-radius: 70px 20px;
+    transform: rotate(-139deg);
+    border-left: 2px black solid;
+    margin-top: -79px;
+    margin-left: 74px;
+}
+
+.Rose_right {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50% 0% 50% 50%;
+    margin-left: 83px;
+    margin-top: 112px;
+    transform: rotate(45deg);
+}
+
+.Rose_left {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50% 0% 50% 50%;
+    margin-top: -14.55px;
+    margin-left: 105px;
+    transform: rotate(-135deg);
+}
+
+.Left_hear {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #666666 100%);
+    margin-top: -182px;
+    margin-left: 37px;
+}
+
+.Right_hear {
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #666666 100%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-top: -38px;
+    margin-left: 127px;
+}
+
+.Nose {
+    width: 30px;
+    height: 12px;
+    background: linear-gradient(270deg, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
+    border-radius: 50%;
+    margin-left: 58px;
+    margin-top: -11px;
+}
+
+.eyeball_left {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-30deg);
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 12px;
+    margin-left: 8px;
+    background-color: white;
+}
+
+.Pupil_left {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #575957;
+    margin-top: 3px;
+    margin-left: 6px;
+}
+
+.eyeball_right {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transform: rotate(30deg);
+    margin-top: 11px;
+    margin-left: 7px;
+}
+
+.Pupil_right {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #575957;
+    margin-top: 3px;
+    margin-left: -1px;
+}
+
+.Ocular_spot_left {
+    width: 35px;
+    height: 60px;
+    background: #575957;
+    border-radius: 20px/35px;
+    transform: rotate(30deg);
+    display: flex;
+    margin-top: 35px;
+    margin-left: 28px;
+}
+
+.Ocular_spot_right {
+    width: 35px;
+    height: 60px;
+    background: #575957;
+    border-radius: 20px/35px;
+    transform: rotate(-30deg);
+    margin-left: 83px;
+    margin-top: -60px;
+    display: flex;
+}
+
+.Eyes_and_nose {
+    margin: auto;
+    margin-top: 20px;
+    width: 145px;
+    height: 145px;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, var(--main-yellow) 80%);
+    border-radius: 50%;
+    border: 3px solid #666666;
+}
+
+.Face {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.Picture {
+    background-color: var(--main-green);
+    width: 200px;
+    height: 200px;
+    margin:auto;
+}
 
 .Pictures{
     background-color:var(--main-yellow);
@@ -132,7 +289,7 @@ figcaption > p{
     font-size:15px;
 }
 
-
+/*Пушкин*/
 .Archery_Pushkin {
     height: 135px;
     display: flex;
@@ -277,11 +434,11 @@ figcaption > p{
 
 .Footer{
     width: calc(80% - 60px );
-    padding: 30px;
+    padding: 10px 30px;
     max-width: 1000px;
     text-align: center;
     margin: 30px auto auto;
-    background-color: var(--main-yellow);
+    background-color: var(--main-green);
     color: var(--main-white);
 }
 
@@ -295,5 +452,9 @@ figcaption > p{
     }
     .Navigation > ul{
         flex-wrap: wrap;
+    }
+    .Square{
+        flex-direction:column;
+        align-items: center;
     }
 }
